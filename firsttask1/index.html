@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #container {
+        height: 350px;
+        width: 600px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .login-id {
+        margin-top: 20px;
+    }
+    
+    .login-id-input {
+        width: 60%;
+        height: 30px;
+    }
+    
+    .login-password {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .login-password-input {
+        width: 60%;
+        height: 30px;
+    }
+    
+    .btn-login {
+        width: 25%;
+        height: 30px;
+        background-color: #87ceeb;
+        border: solid 1px;
+    }
+    
+    .btn-regist {
+        width: 25%;
+        height: 30px;
+        background-color: white;
+        border: solid 1px;
+        margin-left: 10%;
+    }
+    
+    .pag-box a {
+        color: #6c6c6c;
+    }
+    
+    .icon {
+        font-style: normal;
+    }
+    
+    .icon-wblg {
+        content: icon;
+        icon: url(weblog.jpg);
+    }
+    
+    .btn {
+        margin-top: 10px;
+    }
+    
+    .login-box {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    
+    .login-box a {
+        color: #6c6c6c;
+        height: 20px;
+    }
+    
+    .remark-box a {
+        color: #6495ed;
+    }
+    
+    .remark {
+        font-style: normal;
+        font-size: 13px;
+        margin-right: 10px;
+        color: #a9a9a9;
+    }
+    
+    input {
+        border-radius: 6px;
+        outline: none;
+        border: 2px solid #696969;
+    }
+    
+    .btn input {
+        border-radius: 6px;
+        outline: none;
+        border: 2px solid #696969;
+    }
+    
+    .login-box i {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+    
+    .icon1 {
+        background-image: url(weblog.jpg);
+    }
+    
+    .icon2 {
+        background-image: url(qq.jpg);
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div class="pag-box a">
+            <a href="index.html">密码登录</a> <a href="index2.html">短信登录</a>
+        </div>
+        <form>
+            <div class="login-id">
+                <input placeholder="你的手机号/邮箱" class="login-id-input" style="text-indent: 10px;">
+            </div>
+            <div class="login-password">
+                <input type="password" placeholder="密码" class="login-password-input" style="text-indent: 10px;">
+            </div>
+            <div class="remark-box">
+                <input type="checkbox">记住我 <i class="remark">不是自己的电脑上不要勾选此项</i>
+                <a href="https://www.baidu.com" target="_blank">无法验证？</a>
+                <a href="https://www.baidu.com" target="_blank">忘记密码？</a>
+            </div>
+            <div class="btn">
+                <input type="submit" value="登录" class="btn-login">
+                <input type="submit" value="注册" class="btn-regist">
+            </div>
+            <div class="login-box">
+                <a href="https://www.baidu.com" target="_self"><i class="icon1"></i>微博账号登录</a>
+                <a href="https://www.baidu.com" target="_self" style="margin-left: 15px;"><i class="icon2"></i>QQ账号登录</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
