@@ -5,8 +5,8 @@ function retur(arr) {
     arr.sort();
 
     for (var i = 0; i < arr.length; i++) {
-        if (arr[i] == arr[i + 1] && newarr.indexOf(arr[i]) == -1) {
-            newarr.push(arr[i]);
+        if (arr[i] == arr[i + 1] && newarr.indexOf(arr[i].repeat(2)) == -1) {
+            newarr.push(arr[i].repeat(2));
         }
     }
 
