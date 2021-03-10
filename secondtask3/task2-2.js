@@ -5,7 +5,7 @@ var arr = [
 ];
 
 function even(arr) {
-    return arr.toString()
+    return arr.toString().split(",").map(Number);
 }
 
 console.log(even(arr)); // [ 1, 2, 3, 4, 6, 7, 9, 11, 12, 12, 13, 14, 10 ]
