@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="Mytxt" cols="80" rows="10"></textarea>
+    <button class="post">点击发布</button>
+    <div class="list">
+    </div>
+
+    <script>
+        let btn = document.getElementsByClassName("post")[0];
+        let divs = document.getElementsByTagName("div");
+        let index = divs.length - 1;
+        btn.onclick = function() {
+            let divi = document.createElement("div");
+            let txt = document.createTextNode(document.getElementById("Mytxt").value);
+            divi.appendChild(txt);
+            divs[index].appendChild(divi);
+            document.getElementById("Mytxt").value = "";
+        }
+    </script>
+</body>
+
+</html>

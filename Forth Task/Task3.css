@@ -1,0 +1,56 @@
+input {
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid;
+}
+
+#outl {
+    margin-left: 30px;
+}
+
+.value {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.box1,
+.box2-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box2 {
+    background-color: aquamarine;
+    width: 850px;
+    height: 600px;
+    position: relative;
+    padding: 6px 6px;
+}
+
+.box2-wrapper {
+    position: absolute;
+    bottom: 10px;
+    padding: 0 5px;
+}
+
+.box2-locked {
+    background-color: pink;
+    width: 50px;
+    height: 100%;
+}
+
+button {
+    background-color: bisque;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    height: 25px;
+    width: 80px;
+    margin-left: 10px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
