@@ -1,49 +1,42 @@
 function Student(name) {
-    Student.cbs = [];
-    Student.cbs.push(() => {
-        console.log(`Hi! This is ${name}!`);
-        Student.next()
-    })
-    setTimeout(() => {
-        Student.next();
-    }, 0);
-    return Student;
-}
-
-Student.next = function() {
-    const cb = Student.cbs.shift();
-    cb && cb();
-}
-
-Student.sleep = function(time) {
-    Student.cbs.push(() => {
+    function People(name) {
         setTimeout(() => {
-            console.log(`Wake up after ${time}`);
-            Student.next();
-        }, time * 1000);
-    })
-    return Student;
-}
+            console.log(`Hi! This is ${name}!`);
+        })
+    }
 
-Student.sleepFirst = function(time) {
-    Student.cbs.unshift(() => {
+    People.prototype.sleep = function(time) {
+        let curTime = new Date();
+        let delay = time * 1000;
         setTimeout(() => {
+            while (new Date() - curTime < delay) {};
             console.log(`Wake up after ${time}`);
-            Student.next();
-        }, time * 1000)
-    })
-    return Student;
+        }, 0);
+
+        return this;
+    }
+
+    People.prototype.sleepFirst = function(time) {
+        let curTime = new Date();
+        let delay = time * 1000;
+        while (new Date() - curTime < delay) {};
+        console.log(`Wake up after ${time}`);
+
+        return this;
+    }
+
+    People.prototype.study = function(course) {
+        setTimeout(() => {
+            console.log(`Study ${course}~`);
+        }, 0);
+
+        return this;
+    }
+
+    return new People(name);
 }
 
-Student.study = function(course) {
-    Student.cbs.push(() => {
-        console.log(`Study ${course}`);
-        Student.next();
-    })
-    return Student;
-}
-
-Student('fxy');
+// Student('fxy');
 // Student('fxy').sleep(3).study('javascript');
 // Student('fxy').study('javascript').study('Vue');
-// Student('fxy').sleepFirst(5).study('Ajax');
+Student('fxy').sleepFirst(5).study('Ajax');
