@@ -1,0 +1,15 @@
+li {
+    list-style-type: none;
+    width: 20%;
+    height: 200px;
+    display: inline-block;
+}
+
+.pic-container {
+    width: 200px;
+    height: 200px;
+}
+
+p {
+    width: 200px;
+}
