@@ -1,0 +1,657 @@
+    * {
+        margin: 0;
+        padding: 0;
+        background-repeat: no-repeat;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    div {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #f4f4f4;
+    }
+    
+    body,
+    html {
+        overflow-x: hidden;
+        font: 12px/18px sans-serif;
+    }
+    
+    section {
+        box-sizing: border-box;
+    }
+    
+    ol,
+    ul {
+        list-style-type: none;
+    }
+    
+    .container {
+        display: block;
+        max-width: 500px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    #sec-main {
+        height: 470px;
+        /* background-image: linear-gradient(180deg, #3bbcff, #4af4ff); */
+        /*夜晚*/
+        background-image: linear-gradient(180deg, #313877, #44abec);
+        /* background-image: -webkit-linear-gradient(-90deg, #50ade8, #7ae0fa); */
+        /*阴天*/
+        /* background-image: -webkit-linear-gradient(-90deg, #86c3ca, #b5e9e8); */
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #sec-main .text .location {
+        background-image: url(./picture/header/location.png);
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        vertical-align: middle;
+        margin-top: -2px;
+        margin-right: 4px;
+        background-size: 16px;
+    }
+    
+    #sec-main #link-back,
+    #sec-main #btn-share {
+        position: absolute;
+        height: 22px;
+        width: 22px;
+        top: 15px;
+    }
+    
+    #sec-main #link-back {
+        content: url(./picture/header/arrow.png);
+        left: 8px;
+    }
+    
+    #sec-main #btn-share {
+        content: url(./picture/header/share.png);
+        right: 8px;
+    }
+    
+    #sec-main .text {
+        height: 16px;
+        line-height: 16px;
+        width: 76%;
+        margin: 18px 12% 6px;
+        font-size: 16px;
+        color: #fff;
+    }
+    
+    #sec-main .wind-humidity {
+        margin-top: 10px;
+        height: 14px;
+        position: relative;
+    }
+    
+    #sec-main .wind-humidity .txt {
+        height: 14px;
+        line-height: 14px;
+        font-size: 14px;
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    #sec-main .txt-tips {
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.5;
+        height: 16px;
+        margin: 50px 60px 0;
+        position: relative;
+    }
+    
+    #sec-main .weather {
+        font-size: 22px;
+        color: #fff;
+        line-height: 22px;
+        height: 22px;
+        margin-top: 8px;
+    }
+    
+    #sec-main .temperature {
+        font-size: 62px;
+        color: #fff;
+        line-height: 62px;
+        height: 62px;
+        margin-top: 66px;
+        position: relative;
+    }
+    
+    #sec-main .temperature:after {
+        content: "\B0";
+        position: absolute;
+        text-align: left;
+        top: 0;
+    }
+    
+    #sec-main .aqi {
+        background-color: #a3d765;
+        height: 44px;
+        padding: 8px 12px;
+        position: absolute;
+        border-radius: 8px;
+        top: 67px;
+        left: 8px;
+    }
+    
+    #sec-main .aqi .til {
+        opacity: .8;
+        font-size: 12px;
+        color: #fff;
+        line-height: 12px;
+        height: 12px;
+        margin-bottom: 3px;
+    }
+    
+    #sec-main .aqi .value {
+        margin-top: 2px;
+        font-size: 12px;
+        color: #fff;
+        height: 14px;
+        line-height: 14px;
+    }
+    
+    #sec-main .landscape .layer {
+        content: "";
+        left: -6%;
+        right: -6%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        bottom: 0;
+        top: 60px;
+    }
+    
+    #sec-main #layer1 {
+        background-image: url(./picture/main/n-bg01.png);
+        z-index: 3;
+    }
+    
+    #sec-main #layer2 {
+        background-image: url(./picture/main/n-bg02.png);
+        z-index: 2;
+    }
+    
+    #sec-main #layer3 {
+        background-image: url(./picture/main/n-bg03.png);
+        z-index: 1;
+    }
+    
+    #sec-tomorrow {
+        background: #fff;
+        height: 103px;
+        padding-top: 26px;
+        border-bottom: 1px solid #e4e4e4;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    
+    #sec-tomorrow .item {
+        float: left;
+        width: 50%;
+        height: 52px;
+        font-size: 14px;
+        color: #434343;
+        line-height: 14px;
+        padding: 0 20px;
+    }
+    
+    #sec-tomorrow .top {
+        height: 12px;
+        margin-bottom: 13px;
+    }
+    
+    #sec-tomorrow .bottom {
+        height: 22px;
+    }
+    
+    #sec-tomorrow .tomo-date {
+        float: left;
+    }
+    
+    #sec-tomorrow .temperature {
+        float: right;
+    }
+    
+    #sec-tomorrow .weather {
+        float: left;
+        height: 22px;
+        line-height: 22px;
+    }
+    
+    #sec-tomorrow .item .bottom .logo {
+        float: right;
+        height: 22px;
+        width: 22px;
+    }
+    
+    #sec-tomorrow::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 52px;
+        background-color: #f0f0f0;
+        left: 50%;
+        top: 26px;
+    }
+    
+    #sec-hours {
+        height: 136px;
+        border-bottom: 1px solid #e4e4e4;
+        background-color: #fff;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    #sec-hours::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #sec-hours #hours-scroll {
+        width: 400%;
+    }
+    
+    #sec-hours ol {
+        list-style-type: none;
+    }
+    
+    #sec-hours ol li {
+        float: left;
+    }
+    
+    #sec-hours .item {
+        float: left;
+        width: 3.84615%;
+        text-align: center;
+        position: relative;
+    }
+    
+    #sec-hours .item .time {
+        font-size: 12px;
+        line-height: 12px;
+        height: 12px;
+        color: #999;
+    }
+    
+    #sec-hours .item .icon {
+        height: 24px;
+        width: 24px;
+        display: block;
+        margin: 15px auto;
+    }
+    
+    #sec-hours .item .degree {
+        font-size: 14px;
+        color: #434343;
+        line-height: 14px;
+        height: 14px;
+        position: relative;
+    }
+    
+    #sec-days {
+        border-top: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        background-color: #fff;
+        height: 391px;
+        padding-top: 25px;
+        margin-bottom: 10px;
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+    #sec-days::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #sec-days .scroll {
+        width: 426.667px;
+    }
+    
+    #sec-days li {
+        list-style-type: none;
+        float: left;
+        width: 53.3333px;
+        text-align: center;
+    }
+    
+    #sec-days .day,
+    .date {
+        font-size: 12px;
+        color: #999;
+        line-height: 12px;
+        height: 12px;
+    }
+    
+    #sec-days .item .date {
+        margin: 5px 0 15px;
+    }
+    
+    #sec-days .daytime .weather {
+        margin-bottom: 14px;
+    }
+    
+    #sec-days .icon {
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #sec-days .wind {
+        font-size: 12px;
+        color: #b2b2b2;
+        line-height: 12px;
+        height: 12px;
+        width: 40px;
+        margin: 0 auto 6px;
+        overflow: hidden;
+    }
+    
+    #sec-days .wind-scale {
+        font-size: 12px;
+        color: #b2b2b2;
+        line-height: 12px;
+        height: 12px;
+        width: 40px;
+        margin: 0 auto 6px;
+        overflow: hidden;
+    }
+    
+    #sec-days .night {
+        margin-top: 136px;
+    }
+    
+    #sec-days .weather {
+        font-size: 14px;
+        color: #434343;
+        line-height: 14px;
+        height: 14px;
+    }
+    
+    #sec-days .night .weather {
+        margin: 16px 0 20px;
+    }
+    
+    #sec-days #chart-days {
+        width: 426.667px;
+        height: 136px;
+    }
+    
+    #sec-days .chart {
+        display: block;
+        height: 136px;
+        width: 426px;
+    }
+    
+    #sec-living .living-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #sec-living .item {
+        background-color: #fff;
+        float: left;
+        text-align: center;
+        width: 25%;
+        height: 94px;
+        border-right: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        box-sizing: border-box;
+    }
+    
+    #sec-living .living-container {
+        overflow: hidden;
+        visibility: visible;
+        position: relative;
+        overflow: scroll;
+    }
+    
+    #sec-living #living-scroll #living-list {
+        width: 50%;
+        float: left;
+        border-top: 1px solid #e4e4e4;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+    }
+    
+    #sec-living #living-list {
+        box-sizing: border-box;
+        float: left;
+        width: 320px;
+        position: relative;
+        transition-property: transform;
+        transition-duration: 300ms;
+    }
+    
+    #sec-living #living-scroll #living-list .item .icon {
+        height: 24px;
+        width: 24px;
+        display: block;
+        margin: 15px auto 10px;
+        background-size: 24px;
+    }
+    
+    #sec-living .icon_jiaotong {
+        padding-bottom: 2px;
+    }
+    
+    #sec-living #living-scroll #living-list .item .content {
+        font-size: 14px;
+        color: #434343;
+        line-height: 14px;
+        height: 14px;
+        margin-bottom: 6px;
+    }
+    
+    #sec-living #living-scroll #living-list .item .title {
+        color: #999;
+        height: 12px;
+        line-height: 12px;
+    }
+    
+    #sec-living .icon_chuanyi {
+        background-image: url(./picture/living/穿衣.png);
+    }
+    
+    #sec-living .icon_kongtiao {
+        background-image: url(./picture/living/空调.png);
+    }
+    
+    #sec-living .icon_ganmao {
+        background-image: url(./picture/living/感冒.png);
+    }
+    
+    #sec-living .icon_xiche {
+        background-image: url(./picture/living/洗车.png);
+    }
+    
+    #sec-living .icon_yundong {
+        background-image: url(./picture/living/运动.png);
+    }
+    
+    #sec-living .icon_fangshai {
+        background-image: url(./picture/living/防晒.png);
+    }
+    
+    #sec-living .icon_diaoyu {
+        background-image: url(./picture/living/钓鱼.png);
+    }
+    
+    #sec-living .icon_lvyou {
+        background-image: url(./picture/living/旅游.png);
+    }
+    
+    #sec-living .icon_jiaotong {
+        background-image: url(./picture/living/交通.png);
+    }
+    
+    #sec-living .icon_kongqi {
+        background-image: url(./picture/living/空气污染扩散条件.png);
+    }
+    
+    #sec-living .icon_shushidu {
+        background-image: url(./picture/living/舒适度.png);
+    }
+    
+    #sec-living .icon_liangshai {
+        background-image: url(./picture/living/晾晒.png);
+    }
+    
+    #sec-living .icon_huazhuang {
+        background-image: url(./picture/living/化妆.png);
+    }
+    
+    #sec-living .icon_ziwaixian {
+        background-image: url(./picture/living/紫外线.png);
+    }
+    
+    #sec-living .icon_guomin {
+        background-image: url(./picture/living/过敏.png);
+    }
+    
+    #sec-living .icon_taiyangjing {
+        background-image: url(./picture/living/太阳镜.png);
+    }
+    
+    #sec-living .wurankuosan {
+        font-size: 10px;
+    }
+    
+    #sec-living .living-tab {
+        width: 100%;
+        text-align: center;
+        background: #f4f4f4;
+    }
+    
+    #sec-living .living-tab span {
+        display: inline-block;
+        width: 10px;
+        height: 3px;
+        background: #e3e3e3;
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+    
+    #sec-footer {
+        font-size: 12px;
+        padding: 15px 0;
+        text-align: center;
+        color: #b2b2b2;
+    }
+    
+    #sec-footer #copyright {
+        clear: both;
+        height: 26px;
+        line-height: 26px;
+    }
+    
+    #sec-footer #link #txt {
+        height: 26px;
+        line-height: 26px;
+        display: inline-block;
+    }
+    
+    .yin {
+        content: url(./picture/weather/天气/阴.svg);
+    }
+    
+    .yu {
+        content: url(./picture/weather/天气/小雨.svg);
+    }
+    
+    .duoyun {
+        content: url(./picture/weather/天气/多云.svg);
+    }
+    
+    .yunyu {
+        content: url(./picture/weather/天气/多云转小雨.svg);
+    }
+    
+    .icon-100 {
+        content: url(./picture/weather/天气/晴.svg);
+    }
+    
+    .icon-101 {
+        content: url(./picture/weather/天气/多云.svg)
+    }
+    
+    .icon-104 {
+        content: url(./picture/weather/天气/阴.svg)
+    }
+    
+    .icon-150 {
+        content: url(./picture/weather/天气/n-晴.svg);
+    }
+    
+    .icon-154 {
+        content: url(./picture/weather/天气/阴.svg);
+    }
+    
+    .icon-302 {
+        content: url(./picture/weather/天气/雷阵雨.svg);
+    }
+    
+    .icon-305 {
+        content: url(./picture/weather/天气/小雨.svg)
+    }
+    
+    .icon-306 {
+        content: url(./picture/weather/天气/中雨.svg);
+    }
+    
+    .rise {
+        content: url(./picture/weather/天气/rise.png);
+    }
+    
+    .sunset {
+        content: url(./picture/weather/天气/日落.png);
+    }
+    
+    #sec-location {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+        position: fixed;
+        background-color: lavenderblush;
+    }
+    
+    #search {
+        height: 30px;
+        display: flex;
+    }
+    
+    .txtin {
+        margin-left: 15px;
+        width: 70%;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+    }
+    
+    .cancle {
+        font-size: 20px;
+    }

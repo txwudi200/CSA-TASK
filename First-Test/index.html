@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="weather.css" rel="stylesheet" type="text/css">
+    <link href="clickevent.css" rel="stylesheet" type="text/css">
+    <title>腾讯天气</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <section id="sec-main" class="container">
+                <a href="javascript:;" id="link-back"></a>
+                <a href="javascript:;" id="btn-share"></a>
+                <p class="text"><span class="location"></span>重庆</p>
+                <div class="aqi">
+                    <p class="til"></p>
+                    <p class="value"></p>
+                </div>
+                <p class="temperature"></p>
+                <p class="weather"></p>
+                <div class="wind-humidity">
+                    <p class="text wind-txt"></p>
+                    <p class="show-txt"></p>
+                </div>
+                <p class="txt-tips">你若安好便是晴天</p>
+                <div class="landscape">
+                    <div class="layer" id="layer1"></div>
+                    <div class="layer" id="layer2"></div>
+                    <div class="layer" id="layer3"></div>
+                </div>
+                <div class="aqi-container">
+                    <div class="aqi-box" style="display:none">
+
+                    </div>
+                </div>
+
+            </section>
+            <section id="sec-tomorrow" class="container">
+                <div class="item">
+                    <div class="top">
+                        <p class="tomo-date">今天</p>
+                        <p class="temperature"></p>
+                    </div>
+                    <div class="bottom">
+                        <p class="weather"></p>
+                        <img class="logo">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="top">
+                        <p class="tomo-date">明天</p>
+                        <p class="temperature"></p>
+                    </div>
+                    <div class="bottom">
+                        <p class="weather"></p>
+                        <img class="logo">
+                    </div>
+                </div>
+            </section>
+            <section id="sec-hours" class="container">
+                <div id="hours-scroll">
+                    <ol id="hol">
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time"></p>
+                            <img class="icon">
+                            <p class="degree"></p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time">00:00</p>
+                            <img class="icon rise">
+                            <p class="degree">日出</p>
+                        </li>
+                        <li class="item h-item">
+                            <p class="time">00:00</p>
+                            <img class="icon sunset">
+                            <p class="degree">日落</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section id="sec-days" class="container">
+                <div class="scroll" style="overflow-x: hidden;overflow-y:hidden;">
+                    <ol id="days">
+                        <li class="item">
+                            <p class="day">昨天</p>
+                            <p class="date"></p>
+                            <div class="daytime">
+                                <p class="weather day-wea"></p>
+                                <img class="icon day-icon">
+                            </div>
+                            <div class="night">
+                                <img class="icon night-icon">
+                                <p class="weather night-wea"></p>
+                            </div>
+                            <p class="wind"></p>
+                            <p class="wind-scale"></p>
+                        </li>
+                        <li class="item">
+                            <p class="day">今天</p>
+                            <p class="date"></p>
+                            <div class="daytime">
+                                <p class="weather day-wea"></p>
+                                <img class="icon  day-icon">
+                            </div>
+                            <div class="night">
+                                <img class="icon night-icon">
+                                <p class="weather night-wea"></p>
+                            </div>
+                            <p class="wind"></p>
+                            <p class="wind-scale"></p>
+                        </li>
+                        <li class="item">
+                            <p class="day">明天</p>
+                            <p class="date"></p>
+                            <div class="daytime">
+                                <p class="weather day-wea"></p>
+                                <img class="icon  day-icon">
+                            </div>
+                            <div class="night">
+                                <img class="icon night-icon">
+                                <p class="weather night-wea"></p>
+                            </div>
+                            <p class="wind">西南风</p>
+                            <p class="wind-scale"></p>
+                        </li>
+                        <li class="item">
+                            <p class="day">后天</p>
+                            <p class="date"></p>
+                            <div class="daytime">
+                                <p class="weather day-wea"></p>
+                                <img class="icon  day-icon">
+                            </div>
+                            <div class="night">
+                                <img class="icon night-icon">
+                                <p class="weather night-wea"></p>
+                            </div>
+                            <p class="wind"></p>
+                            <p class="wind-scale"></p>
+                        </li>
+                        <li class="item">
+                            <p class="day">周二</p>
+                            <p class="date"></p>
+                            <div class="daytime">
+                                <p class="weather day-wea"></p>
+                                <img class="icon  day-icon">
+                            </div>
+                            <div class="night">
+                                <img class="icon night-icon">
+                                <p class="weather night-wea"></p>
+                            </div>
+                            <p class="wind"></p>
+                            <p class="wind-scale"></p>
+                        </li>
+                        <li class="item">
+                            <p class="day">周三</p>
+                            <p class="date"></p>
+                            <div class="daytime">
+                                <p class="weather day-wea"></p>
+                                <img class="icon  day-icon">
+                            </div>
+                            <div class="night">
+                                <img class="icon night-icon">
+                                <p class="weather night-wea"></p>
+                            </div>
+                            <p class="wind"></p>
+                            <p class="wind-scale"></p>
+                        </li>
+                        <li class="item">
+                            <p class="day">周四</p>
+                            <p class="date"></p>
+                            <div class="daytime">
+                                <p class="weather day-wea"></p>
+                                <img class="icon  day-icon">
+                            </div>
+                            <div class="night">
+                                <img class="icon night-icon">
+                                <p class="weather night-wea"></p>
+                            </div>
+                            <p class="wind"></p>
+                            <p class="wind-scale"></p>
+                        </li>
+                        <li class="item">
+                            <p class="day">周五</p>
+                            <p class="date"></p>
+                            <div class="daytime">
+                                <p class="weather day-wea"></p>
+                                <img class="icon  day-icon">
+                            </div>
+                            <div class="night">
+                                <img class="icon night-icon">
+                                <p class="weather night-wea"></p>
+                            </div>
+                            <p class="wind"></p>
+                            <p class="wind-scale"></p>
+                        </li>
+                    </ol>
+                    <div id="chart-days">
+                        <canvas class="chart"></canvas>
+                    </div>
+                </div>
+            </section>
+            <section id="sec-living" class="container">
+                <div id="living-scroll">
+                    <div class="living-container">
+                        <div style="overflow: hidden;position: relative;width: 640px;">
+                            <ul id="living-list" style="transform: translate(0px, 0px) translateZ(0px);left: 0px;">
+                                <li class="item type_3">
+                                    <span class="icon icon_chuanyi">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">穿衣</p>
+                                </li>
+                                <li class="item type_5">
+                                    <span class="icon icon_ziwaixian">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">紫外线</p>
+                                </li>
+                                <li class="item type_9">
+                                    <span class="icon icon_ganmao">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">感冒</p>
+                                </li>
+                                <li class="item type_2">
+                                    <span class="icon icon_xiche">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">洗车</p>
+                                </li>
+                                <li class="item type_1">
+                                    <span class="icon icon_yundong">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">运动</p>
+                                </li>
+                                <li class="item type_16">
+                                    <span class="icon icon_fangshai">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">防晒</p>
+                                </li>
+                                <li class="item type_4">
+                                    <span class="icon icon_diaoyu">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">钓鱼</p>
+                                </li>
+                                <li class="item type_6">
+                                    <span class="icon icon_lvyou">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">旅游</p>
+                                </li>
+                            </ul>
+                            <ul id="living-list" style="transform: translate(0px, 0px) translateZ(0px);left: 0px;">
+                                <li class="item type_15">
+                                    <span class="icon icon_jiaotong">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">交通</p>
+                                </li>
+                                <li class="item type_10">
+                                    <span class="icon icon_kongqi">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title wurankuosan">空气污染扩散条件</p>
+                                </li>
+                                <li class="item type_8">
+                                    <span class="icon icon_shushidu">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title"> 舒适度</p>
+                                </li>
+                                <li class="item type_14">
+                                    <span class="icon icon_liangshai">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">晾晒</p>
+                                </li>
+                                <li class="item type_13">
+                                    <span class="icon icon_huazhuang">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">化妆</p>
+                                </li>
+                                <li class="item type_11">
+                                    <span class="icon icon_kongtiao">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">空调</p>
+                                </li>
+                                <li class="item type_7">
+                                    <span class="icon icon_guomin">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">过敏</p>
+                                </li>
+                                <li class="item type_12">
+                                    <span class="icon icon_taiyangjing">
+        
+                                    </span>
+                                    <p class="content"></p>
+                                    <p class="title">太阳镜</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="living-tab">
+                    <span class="current">
+
+                    </span>
+                    <span>
+
+                    </span>
+                </div>
+            </section>
+            <footer id="sec-footer" class="container">
+                <div id="link">
+                    <a href="http://m.weather.com.cn/d/town/index?lat=29.52878&lon=106.60813&areaid=101040100" id="txt">
+                        数据来源于中国天气网
+                    </a>
+                </div>
+                <div id="copyright">
+                    Copyright © 1998 - 2021 Tencent. All Rights Reserved
+                </div>
+            </footer>
+            <section id="sec-location" class="container close" style="visibility: hidden;">
+                <div id="location">
+                    <div id="search">
+                        <input type="text" class="txtin">
+                        <span class="cancle">取消</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="tmr&day.js"></script>
+    <script src="shikuang.js"></script>
+    <script src="hours.js"></script>
+    <script src="weather.js"></script>
+    <!-- <script src="history.js"></script> -->
+    <script src="living.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-nightly@5.1.2-dev.20210512/dist/echarts.min.js"></script>
+    <!-- <script src="canvas.js"></script> -->
+    <script src="aqi.js"></script>
+</body>
+
+</html>
